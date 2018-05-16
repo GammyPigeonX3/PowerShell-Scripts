@@ -1,0 +1,1 @@
+Import-csv "C:\Users\erbkershaw\Documents\NNFwdList.csv" | ForEach-Object -Process { Get-Mailbox $_.Name | Where {$_.ForwardingSMTPAddress -ne $Null} | Select Name, ForwardingAddress,ForwardingsmtpAddress, DeliverToMailboxAndForward, PrimarySMTPAddress } | Export-csv 'C:\Users\erbkershaw\Documents\Script Exports\NNfwd9.csv'

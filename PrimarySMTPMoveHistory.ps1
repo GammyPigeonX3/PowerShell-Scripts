@@ -1,0 +1,1 @@
+Get-Mailbox -ResultSize unlimited | ?{$_.PrimarySMTPAddress -like "*@cscglobal.com"} | Get-MailboxStatistics -IncludeMoveHistory | select DisplayName,SourceDatabase,TargetDatabase,MoveHistory | ft | Export-Csv C:\Users\erbkershaw\Documents\ExchangeMoveDateFT.ps1

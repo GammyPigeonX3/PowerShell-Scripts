@@ -1,0 +1,32 @@
+Add-MailboxPermission -Identity Amit.tharwani -User avadgama -AccessRights FullAccess -InheritanceType All
+Add-MailboxPermission -Identity Chris.Williams -User avadgama -AccessRights FullAccess -InheritanceType All
+Add-MailboxPermission -Identity C.Khalil -User avadgama -AccessRights FullAccess -InheritanceType All
+Add-MailboxPermission -Identity Micha.iteka -User bsacco -AccessRights FullAccess -InheritanceType All
+Add-MailboxPermission -Identity Yamile.algotsson -User bsacco -AccessRights FullAccess -InheritanceType All
+
+Add-MailboxPermission -Identity UK-LDN-GDM-Unilever -User avadgama -AccessRights FullAccess -InheritanceType All
+
+
+Amit Tharwani A.tharwani@netnames.com
+Chris Williams C.Williams@NetNames.com
+Christine Khalil C.Khalil@NetNames.com
+Micha Iteka M.iteka@netnames.com
+Yamile Algotsson Y.algotsson@netnames.com
+
+
+Add-ADPermission "Amit.tharwani" -User "office\bsacco" -Extendedrights "Send As"
+Add-ADPermission "Chris.Williams" -User "office\bsacco" -Extendedrights "Send As"
+Add-ADPermission "C.Khalil" -User "office\cdaly3" -Extendedrights "Send As"
+Add-ADPermission "Micha.iteka" -User "office\bsacco" -Extendedrights "Send As"
+Add-ADPermission "Yamile.algotsson" -User "office\bsacco" -Extendedrights "Send As"
+
+
+GSAP Unilever Inbox
+
+UK-LDN-GDM-Unilever
+
+GDM Portfolio
+
+
+Add-MailboxPermission -Identity "GDM Portfolio" -User avadgama -AccessRights FullAccess -InheritanceType All
+Add-MailboxPermission -Identity "GSAP Unilever Inbox" -User avadgama -AccessRights FullAccess -InheritanceType All
