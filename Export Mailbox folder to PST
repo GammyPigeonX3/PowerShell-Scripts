@@ -1,0 +1,2 @@
+EXPORT:
+New-MailboxExportRequest -Mailbox example@domain.com -IncludeFolders "Folder/sub folder/" -FilePath \\server\pst-export\Export.PST
