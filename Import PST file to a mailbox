@@ -1,0 +1,1 @@
+New-MailboxImportRequest -Mailbox "username" -FilePath \\server\pst-export\export.PST
