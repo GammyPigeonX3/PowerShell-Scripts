@@ -1,0 +1,25 @@
+This script will check the firstly the Ex-Employees users, then checks the groups in the specified OU to – if a user in Ex-Employees matches a group it will remove that user from the group. 
+
+To run script on entire domain controller (You should run this script in specific OUs, as it may overload the domain controller.) 
+
+$OU = "OU=Ex-employees,DC=,DC=,DC=,DC=""
+$Users = Get-ADUser -SearchBase $OU -Filter *
+
+Get-ADGroup -Filter * -searchbase "DC=,DC=,DC=,DC=om"
+Remove-ADGroupMember -Members $users -Confirm:$False
+
+To run script on specfic OU
+
+$OU = "OU=,DC=,DC=,DC=,DC="
+$Users = Get-ADUser -SearchBase $OU -Filter *
+
+Get-ADGroup -filter * -SearchBase "OU=,DC=,DC=,DC=,DC=" |
+Remove-ADGroupMember -Members $users -Confirm:$False
+
+
+
+
+
+Once you have removed the Ex employees group memberships, you can now run the following script to move the user into the Ex-Employee folder
+
+Get-aduser -filter {Enabled -eq $false} -SearchBase "OU=Users,OU=,OU=,DC=,DC=,DC=,DC=" | move-adobject -Targetpath "OU=,DC=,DC=,DC=,DC="
